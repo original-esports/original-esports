@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ORIGINAL Esports | Nepal Esports Organization</title>
-    <meta name="description" content="Official website of ORIGINAL Esports Nepal. Rising slowly, dominating completely.">
-    
+    <meta name="description" content="Official website of ORIGINAL Esports Nepal. Rising Slowly, Dominating Completely.">
+
+    <!-- Website Icon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
@@ -31,9 +35,9 @@
 
         img{
             max-width:100%;
+            display:block;
         }
 
-        /* Navigation */
         nav{
             position:fixed;
             top:0;
@@ -50,14 +54,16 @@
         .logo{
             display:flex;
             align-items:center;
-            gap:10px;
-            font-size:1.5rem;
+            gap:15px;
+            font-size:1.7rem;
             font-weight:700;
             color:#00bfff;
         }
 
         .logo img{
-            width:55px;
+            width:60px;
+            height:60px;
+            object-fit:contain;
         }
 
         .nav-links{
@@ -66,40 +72,37 @@
         }
 
         .nav-links a{
-            transition:0.3s;
             font-weight:600;
+            transition:.3s;
         }
 
         .nav-links a:hover{
             color:#ff3b3b;
         }
 
-        /* Hero */
         .hero{
             min-height:100vh;
             display:flex;
-            align-items:center;
             justify-content:center;
+            align-items:center;
             text-align:center;
-            background:
-            linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
-            url('https://images.unsplash.com/photo-1542751371-adc38448a05e');
-            background-size:cover;
-            background-position:center;
             padding:100px 20px;
+            background:
+                linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+                url('images/banner.jpg') center/cover no-repeat;
         }
 
         .hero-content h1{
             font-size:5rem;
-            margin-bottom:20px;
             color:#00bfff;
             text-shadow:0 0 25px #00bfff;
+            margin-bottom:20px;
         }
 
         .hero-content p{
             font-size:1.5rem;
-            margin-bottom:35px;
             color:#ddd;
+            margin-bottom:35px;
         }
 
         .btn{
@@ -108,7 +111,7 @@
             margin:10px;
             border-radius:50px;
             font-weight:bold;
-            transition:0.3s;
+            transition:.3s;
         }
 
         .btn-primary{
@@ -123,7 +126,6 @@
 
         .btn:hover{
             transform:translateY(-5px);
-            box-shadow:0 10px 30px rgba(255,255,255,0.2);
         }
 
         section{
@@ -133,13 +135,12 @@
         .section-title{
             text-align:center;
             font-size:3rem;
-            margin-bottom:60px;
             color:#00bfff;
+            margin-bottom:60px;
         }
 
-        /* About */
         .about{
-            max-width:1100px;
+            max-width:1000px;
             margin:auto;
             text-align:center;
         }
@@ -150,10 +151,9 @@
             color:#ccc;
         }
 
-        /* Team */
         .team-grid{
             display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
             gap:30px;
         }
 
@@ -161,23 +161,23 @@
             background:#111;
             border-radius:20px;
             overflow:hidden;
-            transition:0.4s;
-            text-align:center;
+            transition:.4s;
         }
 
         .card:hover{
             transform:translateY(-10px);
-            box-shadow:0 15px 40px rgba(0,191,255,0.25);
+            box-shadow:0 15px 40px rgba(0,191,255,0.3);
         }
 
         .card img{
-            height:300px;
-            object-fit:cover;
             width:100%;
+            height:350px;
+            object-fit:cover;
         }
 
         .card-content{
             padding:25px;
+            text-align:center;
         }
 
         .card-content h3{
@@ -185,47 +185,54 @@
             margin-bottom:10px;
         }
 
-        /* Store */
         .store-item{
-            max-width:900px;
+            max-width:1000px;
             margin:auto;
             background:#111;
             border-radius:25px;
             overflow:hidden;
             display:grid;
             grid-template-columns:1fr 1fr;
-            gap:30px;
             align-items:center;
+        }
+
+        .store-item img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
         }
 
         .store-info{
             padding:40px;
         }
 
-        .price{
+        .store-info h3{
             font-size:2rem;
-            color:#ff3b3b;
-            margin:20px 0;
+            margin-bottom:20px;
         }
 
-        /* Social */
+        .price{
+            font-size:2.2rem;
+            color:#ff3b3b;
+            margin:25px 0;
+        }
+
         .social-links{
             text-align:center;
         }
 
         .social-links a{
             display:inline-block;
+            font-size:3rem;
             margin:15px;
-            font-size:2.5rem;
-            transition:0.3s;
+            transition:.3s;
         }
 
         .social-links a:hover{
-            transform:scale(1.2);
             color:#00bfff;
+            transform:scale(1.2);
         }
 
-        /* Footer */
         footer{
             background:#000;
             text-align:center;
@@ -233,30 +240,24 @@
             border-top:1px solid #222;
         }
 
-        /* Chat Button */
         .chatbot{
             position:fixed;
-            bottom:30px;
             right:30px;
-            width:65px;
-            height:65px;
-            background:#00bfff;
+            bottom:30px;
+            width:70px;
+            height:70px;
             border-radius:50%;
+            background:#00bfff;
             display:flex;
-            align-items:center;
             justify-content:center;
-            font-size:1.8rem;
-            color:#fff;
+            align-items:center;
+            font-size:2rem;
             cursor:pointer;
-            box-shadow:0 0 30px rgba(0,191,255,0.5);
+            box-shadow:0 0 25px rgba(0,191,255,0.5);
             z-index:1000;
         }
 
         @media(max-width:768px){
-            nav{
-                padding:15px 20px;
-            }
-
             .nav-links{
                 display:none;
             }
@@ -276,7 +277,7 @@
     <!-- Navigation -->
     <nav>
         <div class="logo">
-            <img src="logo.png" alt="ORIGINAL Logo">
+            <img src="images/logo.png" alt="ORIGINAL Logo">
             ORIGINAL
         </div>
 
@@ -289,7 +290,7 @@
         </div>
     </nav>
 
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>ORIGINAL ESPORTS</h1>
@@ -306,13 +307,14 @@
 
         <div class="about">
             <p>
-                Founded in October 2022, ORIGINAL Esports is one of Nepal's rapidly growing
-                competitive gaming organizations. We are dedicated to building champions,
-                creating unforgettable moments, and inspiring the next generation of gamers.
+                Founded in October 2022, ORIGINAL Esports is one of Nepal's fastest-growing
+                esports organizations. Built on passion, teamwork, and dedication,
+                we continue to rise stronger every day.
 
-                Our journey started with a dream, and every day we move closer to greatness.
+                Our mission is simple: dominate the competitive scene,
+                inspire the next generation, and represent Nepal on the global stage.
 
-                We rise slowly, but we rise stronger.
+                We are ORIGINAL.
             </p>
         </div>
     </section>
@@ -322,29 +324,31 @@
         <h2 class="section-title">Our Team</h2>
 
         <div class="team-grid">
+
             <div class="card">
-                <img src="https://via.placeholder.com/400x400" alt="">
+                <img src="images/owner.jpg" alt="OG CHETTRI">
                 <div class="card-content">
-                    <h3>Founder / CEO</h3>
-                    <p>Leading ORIGINAL towards excellence.</p>
+                    <h3>OG CHETTRI</h3>
+                    <p>Founder & CEO</p>
                 </div>
             </div>
 
             <div class="card">
-                <img src="https://via.placeholder.com/400x400" alt="">
+                <img src="images/manager.jpg" alt="Team Manager">
                 <div class="card-content">
                     <h3>Team Manager</h3>
-                    <p>Managing operations and player success.</p>
+                    <p>Head of Operations</p>
                 </div>
             </div>
 
             <div class="card">
-                <img src="https://via.placeholder.com/400x400" alt="">
+                <img src="images/player1.jpg" alt="ORIGINAL Player">
                 <div class="card-content">
                     <h3>Competitive Player</h3>
-                    <p>Representing ORIGINAL worldwide.</p>
+                    <p>Professional Esports Athlete</p>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -353,18 +357,21 @@
         <h2 class="section-title">Official Jersey</h2>
 
         <div class="store-item">
-            <img src="jersey.png" alt="ORIGINAL Jersey">
+            <img src="images/jersey.png" alt="ORIGINAL Jersey">
 
             <div class="store-info">
                 <h3>ORIGINAL Official Team Jersey</h3>
+
                 <p>
-                    Premium quality esports jersey with custom name printing,
-                    breathable fabric, and professional design.
+                    Premium esports jersey featuring authentic ORIGINAL branding,
+                    breathable fabric, professional comfort, and championship style.
                 </p>
 
                 <div class="price">NPR 2,499</div>
 
-                <a href="https://www.facebook.com/originalesp0ffc" class="btn btn-primary">
+                <a href="https://www.facebook.com/originalesp0ffc"
+                   target="_blank"
+                   class="btn btn-primary">
                     Order Now
                 </a>
             </div>
@@ -376,21 +383,10 @@
         <h2 class="section-title">Join Our Community</h2>
 
         <div class="social-links">
-            <a href="https://www.tiktok.com/@teamoriginal.np" target="_blank">
-                <i class="fab fa-tiktok"></i>
-            </a>
-
-            <a href="https://www.facebook.com/originalesp0ffc" target="_blank">
-                <i class="fab fa-facebook"></i>
-            </a>
-
-            <a href="https://discord.gg/zBUTCSd2x" target="_blank">
-                <i class="fab fa-discord"></i>
-            </a>
-
-            <a href="#" target="_blank">
-                <i class="fab fa-youtube"></i>
-            </a>
+            <a href="https://www.tiktok.com/@teamoriginal.np" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/originalesp0ffc" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://discord.gg/zBUTCSd2x" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
         </div>
     </section>
 
@@ -401,7 +397,7 @@
         <p>Founded October 2022 | Nepal</p>
     </footer>
 
-    <!-- AI Chat Support -->
+    <!-- AI Support -->
     <div class="chatbot" onclick="openChat()">
         <i class="fas fa-robot"></i>
     </div>
