@@ -179,6 +179,67 @@ nav{
   box-shadow:0 0 15px rgba(0,150,255,0.7);
   transform:scale(1.05);
 }
+  /* 🔥 STORE FIX (CLEAN DESIGN) */
+.store{
+  text-align:center;
+  padding:40px 20px;
+}
+
+/* IMAGE SIZE FIX */
+.store img{
+  width:80%;
+  max-width:300px;
+  border-radius:12px;
+  margin-bottom:15px;
+}
+
+/* TITLE */
+.store h2{
+  font-size:22px;
+  margin-top:10px;
+}
+
+/* DESCRIPTION */
+.store p{
+  font-size:16px;
+  line-height:1.6;
+  color:#ccc;
+  max-width:400px;
+  margin:10px auto;
+}
+
+/* BUY BUTTON FIX */
+.buy-btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 30px;
+  background:linear-gradient(45deg,#ff3c00,#ff9900);
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  border-radius:30px;
+  text-decoration:none;
+  box-shadow:0 0 15px rgba(255,100,0,0.5);
+  transition:0.3s;
+}
+
+.buy-btn:hover{
+  transform:scale(1.08);
+}
+
+/* PC IMPROVEMENT */
+@media(min-width:768px){
+  .store img{
+    max-width:350px;
+  }
+
+  .store h2{
+    font-size:26px;
+  }
+
+  .store p{
+    font-size:18px;
+  }
 </style>
   
 </head>
