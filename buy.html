@@ -5,49 +5,79 @@
 
 <style>
 body{
-  background:#0b0f2a;
+  background: linear-gradient(to right,#0b0f2a,#020617);
   color:white;
   font-family:sans-serif;
-  text-align:center;
-  padding:30px;
+  margin:0;
 }
 
+/* CENTER FULL PAGE */
 .container{
-  max-width:400px;
-  margin:auto;
+  max-width:500px;
+  margin:80px auto;
   background:#111;
-  padding:20px;
+  padding:25px;
   border-radius:15px;
+  box-shadow:0 0 30px rgba(0,0,0,0.5);
+  text-align:center;
 }
 
+/* IMAGE FIX */
 img{
   width:100%;
+  max-width:420px;
   border-radius:10px;
+  margin-bottom:15px;
 }
 
+/* TITLE */
 h2{
-  margin-top:15px;
+  font-size:26px;
+  margin-bottom:10px;
 }
 
+/* PRICE */
+p{
+  font-size:18px;
+  color:#ccc;
+}
+
+/* INPUT */
 input{
-  width:80px;
-  padding:8px;
-  margin:10px;
+  width:100px;
+  padding:10px;
+  margin-top:10px;
   font-size:16px;
+  border-radius:8px;
+  border:none;
+  text-align:center;
 }
 
+/* BUTTON */
 button{
-  padding:12px 20px;
-  background:orange;
+  margin-top:20px;
+  padding:14px 30px;
+  background:linear-gradient(45deg,#ff3c00,#ff9900);
   border:none;
-  border-radius:20px;
+  border-radius:25px;
+  color:white;
+  font-size:18px;
   font-weight:bold;
   cursor:pointer;
+  box-shadow:0 0 20px rgba(255,100,0,0.6);
+  transition:0.3s;
 }
 
+button:hover{
+  transform:scale(1.08);
+}
+
+/* NOTE */
 .note{
   margin-top:20px;
   color:#aaa;
+  font-size:14px;
+}
 }
 </style>
 
