@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  background: linear-gradient(to right, #000814, #001d3d);
+  color: white;
+  font-family: Arial, sans-serif;
+  margin:0;
+}
+
+/* CENTER CONTAINER */
+.container{
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* IMAGE */
+.container img{
+  width: 260px;
+  max-width: 90%;
+  border-radius: 15px;
+  margin: 20px 0;
+}
+
+/* TITLE */
+.container h1{
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.container p{
+  font-size: 16px;
+  line-height: 1.7;
+  color: #ddd;
+}
+
+/* PC */
+@media(min-width:768px){
+  .container p{
+    font-size: 18px;
+    text-align: justify;
+  }
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .container h1{
+    font-size: 22px;
+  }
+
+  .container p{
+    font-size: 14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Manager</h1>
+
+<img src="images/manager2.jpg">
+
+<h3>Kalpit Pandey</h3>
+<p>
+Kalpit Pandey, a 20-year-old esports player from Hetauda-4, Makwanpur, serves as a key rusher and assaulter for ORIGINAL Esports. Known for his aggressive gameplay and fearless decision-making, Kalpit plays a crucial role in initiating fights and breaking enemy defenses. His sharp reflexes and confident playstyle make him a constant threat on the battlefield. With a strong mindset and passion for competitive gaming, he brings energy, intensity, and reliability to the team, helping ORIGINAL maintain dominance in high-pressure matches.
+</p>
+
+</div>
+
+</body>
+</html>
