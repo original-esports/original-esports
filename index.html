@@ -3,179 +3,110 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ORIGINAL ESPORTS</title>
+<title>ORIGINAL Esports</title>
 
 <style>
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: white;
-  background: radial-gradient(circle at top, #0a0f1f, #000);
+  margin:0;
+  font-family: Arial;
+  background: linear-gradient(to bottom,#050505,#0a0f1f);
+  color:white;
 }
 
 /* NAV */
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 20px;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
+  display:flex;
+  justify-content:space-between;
+  padding:15px;
+  background:#000;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo img { width: 40px; }
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 15px;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #00c6ff;
-}
+.logo img { width:40px; }
 
 /* HERO */
 .hero {
-  height: 100vh;
-  background: url('images/banner.jpg') center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  text-align:center;
+  padding:100px 20px;
+  background:url('images/banner.jpg') center/cover no-repeat;
 }
 
 .hero h1 {
-  font-size: 28px;
-  text-shadow: 0 0 10px #00c6ff, 0 0 20px #000;
-  animation: fadeUp 1s ease;
+  font-size:40px;
 }
 
-/* BUTTONS */
 .btn {
-  padding: 12px 25px;
-  margin: 10px;
-  border-radius: 30px;
-  text-decoration: none;
-  color: white;
-  display: inline-block;
-  transition: 0.3s;
+  padding:12px 25px;
+  border-radius:30px;
+  margin:10px;
+  display:inline-block;
+  text-decoration:none;
+  color:white;
 }
 
-.join {
-  background: linear-gradient(45deg, #00c6ff, #0072ff);
-}
+.join { background:#00c6ff; }
+.shop { background:red; }
 
-.shop {
-  background: linear-gradient(45deg, #ff3b3b, #ff0000);
-}
-
-.btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px #00c6ff;
-}
-
-/* SECTION */
+/* TEAM SECTION */
 .section {
-  padding: 50px 15px;
-  text-align: center;
+  padding:40px 20px;
+  text-align:center;
 }
 
-.section h1 {
-  text-shadow: 0 0 10px #00c6ff;
+.filters button {
+  margin:5px;
+  padding:10px 15px;
+  border-radius:20px;
+  border:none;
+  background:#222;
+  color:white;
+  cursor:pointer;
+}
+
+.filters .active {
+  background:#7b2cff;
 }
 
 /* CARDS */
 .cards {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
 .card {
-  background: rgba(20,20,20,0.8);
-  border-radius: 15px;
-  margin: 15px;
-  padding: 15px;
-  width: 90%;
-  max-width: 300px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 20px #00c6ff;
+  width:250px;
+  margin:10px;
+  background:#111;
+  border-radius:10px;
+  overflow:hidden;
 }
 
 .card img {
-  width: 100%;
-  border-radius: 10px;
+  width:100%;
 }
 
-/* ANIMATION */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+.card h3 {
+  padding:10px;
 }
 
-/* PC VIEW */
-@media (min-width: 768px) {
-  .hero h1 { font-size: 50px; }
-
-  .cards {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .card {
-    width: 250px;
-  }
+/* SCHEDULE */
+.schedule-box {
+  background:#111;
+  margin:10px;
+  padding:15px;
+  border-radius:10px;
+  text-align:left;
 }
-  /* 📱 MOBILE FIX FOR BANNER */
-@media (max-width: 768px) {
-  .hero {
-    height: auto;
-    padding: 120px 20px;
 
-    background: url('images/banner.jpg') center top no-repeat;
-    background-size: contain;
-  }
-
-  .hero h1 {
-    font-size: 20px;
-  }
+/* CONTACT */
+.contact {
+  background:#111;
+  padding:20px;
+  border-radius:10px;
+  margin:10px;
 }
-  /* 📱 FIX TEXT POSITION ON MOBILE */
-@media (max-width: 768px) {
 
-  .hero {
-    position: relative;
-  }
-
-  .hero h1 {
-    position: absolute;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    
-    font-size: 16px;
-    width: 90%;
-    text-align: center;
-    
-    line-height: 1.4;
-  }
-
-}
 </style>
-
 </head>
 
 <body>
@@ -184,79 +115,106 @@ nav a:hover {
 <nav>
   <div class="logo">
     <img src="images/logo.png">
-    <b>ORIGINAL</b>
   </div>
-
-  <div>
-    <a href="#">Home</a>
-    <a href="#team">Team</a>
-    <a href="#store">Store</a>
-  </div>
+  <div>ORIGINAL</div>
 </nav>
 
 <!-- HERO -->
-<div class="hero">
+<section class="hero">
   <h1>Rise Slowly. Dominate Completely.</h1>
-
-  <div>
-    <a href="join.html" class="btn join">JOIN ORIGINAL</a>
-    <a href="#store" class="btn shop">SHOP NOW</a>
-  </div>
-</div>
+  <a href="join.html" class="btn join">JOIN ORIGINAL</a>
+  <a href="#" class="btn shop">SHOP NOW</a>
+</section>
 
 <!-- TEAM -->
-<div class="section" id="team">
-  <h1>Our Team</h1>
+<section class="section">
+  <h2>Our Teams</h2>
 
-  <div class="cards">
+  <div class="filters">
+    <button class="active" onclick="filter('all')">All</button>
+    <button onclick="filter('founder')">Owner / Founder</button>
+    <button onclick="filter('manager')">Manager</button>
+    <button onclick="filter('player')">Players</button>
+  </div>
 
-    <div class="card">
+  <div class="cards" id="team">
+
+    <div class="card founder">
       <a href="founder.html">
-        <img src="images/founder.jpg">
+      <img src="images/founder.jpg">
+      <h3>Founder</h3>
       </a>
-      <h3>Founder / CEO</h3>
     </div>
 
-    <div class="card">
+    <div class="card founder">
       <a href="cofounder.html">
-        <img src="images/cofounder.jpg">
-      </a>
+      <img src="images/cofounder.jpg">
       <h3>Co Founder</h3>
+      </a>
     </div>
 
-    <div class="card">
+    <div class="card manager">
       <a href="manager.html">
-        <img src="images/manager.jpg">
-      </a>
+      <img src="images/manager.jpg">
       <h3>Manager</h3>
-    </div>
-
-  </div>
-</div>
-
-<!-- STORE -->
-<div class="section" id="store">
-  <h1>Our Jerseys</h1>
-
-  <div class="cards">
-
-    <div class="card">
-      <img src="images/jersey1.jpg">
-      <h3>Official Jersey</h3>
-    </div>
-
-    <div class="card">
-      <a href="jersey2.html">
-        <img src="images/jersey2.jpg">
       </a>
-      <h3>Coming Soon</h3>
+    </div>
+
+    <div class="card player">
+      <a href="jersey2.html">
+      <img src="images/jersey1.jpg">
+      <h3>Upcoming Jersey</h3>
+      </a>
     </div>
 
   </div>
-</div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="section">
+  <h2>Schedule</h2>
+
+  <div class="schedule-box">Today - No events scheduled</div>
+  <div class="schedule-box">Tomorrow - No events scheduled</div>
+  <div class="schedule-box">Monday - No events scheduled</div>
+  <div class="schedule-box">Tuesday - No events scheduled</div>
+</section>
+
+<!-- CONTACT -->
+<section class="section">
+  <h2>Get in Touch</h2>
+
+  <div class="contact">
+    <p><b>Email:</b> originalesp.offc@gmail.com</p>
+    <p><b>Phone:</b> +977 9829494300</p>
+    <p><b>Location:</b> Chitwan, Bharatpur</p>
+  </div>
+
+</section>
+
+<script>
+function filter(type) {
+  let cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+    if(type === "all") {
+      card.style.display = "block";
+    } else {
+      if(card.classList.contains(type)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    }
+  });
+
+  document.querySelectorAll(".filters button").forEach(btn=>{
+    btn.classList.remove("active");
+  });
+
+  event.target.classList.add("active");
+}
+</script>
 
 </body>
 </html>
-Sent
-Compose
-Write to
