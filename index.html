@@ -139,8 +139,22 @@ nav a:hover {
     width: 250px;
   }
 }
-</style>
+  /* 📱 MOBILE FIX FOR BANNER */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 120px 20px;
+
+    background: url('images/banner.jpg') center top no-repeat;
+    background-size: contain;
+  }
+
+  .hero h1 {
+    font-size: 20px;
+  }
 }
+</style>
+
 </head>
 
 <body>
