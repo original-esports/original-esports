@@ -1,43 +1,141 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Join ORIGINAL</title>
+
 <style>
-body {background:#0a0f1f;color:white;}
-.chat {padding:20px;}
-.msg {margin:10px;padding:10px;border-radius:10px;}
-.user {background:#00c6ff;}
-.ai {background:#333;}
+body {
+  margin: 0;
+  font-family: Arial;
+  background: radial-gradient(circle, #0a0f1f, #000);
+  color: white;
+}
+
+/* HEADER */
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* CHAT BOX */
+.chat-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 10px;
+}
+
+.chat-box {
+  background: #111;
+  border-radius: 10px;
+  padding: 10px;
+  height: 400px;
+  overflow-y: auto;
+}
+
+/* MESSAGES */
+.user {
+  background: #00c6ff;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  text-align: right;
+}
+
+.bot {
+  background: #333;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  text-align: left;
+}
+
+/* INPUT AREA */
+.input-area {
+  display: flex;
+  margin-top: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  margin-left: 5px;
+  background: #00c6ff;
+  color: white;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .chat-box {
+    height: 300px;
+  }
+}
 </style>
 </head>
 
 <body>
 
-<h2>Chat with ORIGINAL AI</h2>
+<h1>Chat with ORIGINAL AI</h1>
 
-<div class="chat" id="chat">
-  <div class="msg ai">Welcome! Ask anything.</div>
+<div class="chat-container">
+
+  <div class="chat-box" id="chatBox">
+    <div class="bot">Welcome! Ask anything.</div>
+  </div>
+
+  <div class="input-area">
+    <input id="userInput" placeholder="Type message...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
 </div>
 
-<input id="input" placeholder="Type message">
-<button onclick="send()">Send</button>
-
 <script>
-function send(){
-  let input = document.getElementById("input");
-  let chat = document.getElementById("chat");
+function sendMessage() {
+  let input = document.getElementById("userInput");
+  let message = input.value.toLowerCase();
+  let chat = document.getElementById("chatBox");
 
-  let userMsg = document.createElement("div");
-  userMsg.className="msg user";
-  userMsg.innerText=input.value;
-  chat.appendChild(userMsg);
+  if (message === "") return;
 
-  let aiMsg = document.createElement("div");
-  aiMsg.className="msg ai";
-  aiMsg.innerText="We will contact you soon.";
-  chat.appendChild(aiMsg);
+  // show user message
+  chat.innerHTML += `<div class="user">${input.value}</div>`;
 
-  input.value="";
+  let reply = "We will contact you soon.";
+
+  // SMART AI REPLIES
+  if (message.includes("join")) {
+    reply = "To join ORIGINAL ESPORTS, send your UID, rank, and experience.";
+  } 
+  else if (message.includes("hi") || message.includes("hello")) {
+    reply = "Hello 👋 Welcome to ORIGINAL ESPORTS!";
+  }
+  else if (message.includes("team")) {
+    reply = "We are a competitive esports team focused on Free Fire & PUBG.";
+  }
+  else if (message.includes("jersey")) {
+    reply = "Our official jerseys are available in the store section.";
+  }
+  else if (message.includes("owner") || message.includes("founder")) {
+    reply = "You can check our founder details in the team section.";
+  }
+
+  // show bot reply
+  setTimeout(() => {
+    chat.innerHTML += `<div class="bot">${reply}</div>`;
+    chat.scrollTop = chat.scrollHeight;
+  }, 500);
+
+  input.value = "";
 }
 </script>
 
