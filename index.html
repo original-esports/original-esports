@@ -10,25 +10,36 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: white;
-  background: linear-gradient(to bottom, #0a0f1f, #050505);
+  background: radial-gradient(circle at top, #0a0f1f, #000);
 }
 
-/* NAVBAR */
+/* NAV */
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 15px 30px;
+  align-items: center;
+  padding: 12px 20px;
   background: rgba(0,0,0,0.6);
-  position: fixed;
-  width: 100%;
+  backdrop-filter: blur(10px);
 }
 
-nav img { width: 50px; }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img { width: 40px; }
 
 nav a {
   color: white;
-  margin-left: 20px;
   text-decoration: none;
+  margin-left: 15px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00c6ff;
 }
 
 /* HERO */
@@ -43,32 +54,65 @@ nav a {
 }
 
 .hero h1 {
-  font-size: 40px;
+  font-size: 28px;
+  text-shadow: 0 0 20px #00c6ff;
+  animation: fadeUp 1s ease;
 }
 
+/* BUTTONS */
 .btn {
   padding: 12px 25px;
   margin: 10px;
   border-radius: 30px;
   text-decoration: none;
   color: white;
+  display: inline-block;
+  transition: 0.3s;
 }
 
-.join { background: #00c6ff; }
-.shop { background: #ff3b3b; }
+.join {
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+}
 
-/* TEAM */
+.shop {
+  background: linear-gradient(45deg, #ff3b3b, #ff0000);
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #00c6ff;
+}
+
+/* SECTION */
 .section {
-  padding: 60px 20px;
+  padding: 50px 15px;
   text-align: center;
 }
 
+.section h1 {
+  text-shadow: 0 0 10px #00c6ff;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .card {
-  background: #111;
+  background: rgba(20,20,20,0.8);
   border-radius: 15px;
-  margin: 20px auto;
-  padding: 20px;
+  margin: 15px;
+  padding: 15px;
+  width: 90%;
   max-width: 300px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #00c6ff;
 }
 
 .card img {
@@ -76,16 +120,37 @@ nav a {
   border-radius: 10px;
 }
 
+/* ANIMATION */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* PC VIEW */
+@media (min-width: 768px) {
+  .hero h1 { font-size: 50px; }
+
+  .cards {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card {
+    width: 250px;
+  }
+}
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
-  <div>
+  <div class="logo">
     <img src="images/logo.png">
-    ORIGINAL
+    <b>ORIGINAL</b>
   </div>
+
   <div>
     <a href="#">Home</a>
     <a href="#team">Team</a>
@@ -93,8 +158,10 @@ nav a {
   </div>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
   <h1>Rise Slowly. Dominate Completely.</h1>
+
   <div>
     <a href="join.html" class="btn join">JOIN ORIGINAL</a>
     <a href="#store" class="btn shop">SHOP NOW</a>
@@ -105,25 +172,29 @@ nav a {
 <div class="section" id="team">
   <h1>Our Team</h1>
 
-  <div class="card">
-    <a href="founder.html">
-      <img src="images/founder.jpg">
-    </a>
-    <h3>Founder / CEO</h3>
-  </div>
+  <div class="cards">
 
-  <div class="card">
-    <a href="cofounder.html">
-      <img src="images/cofounder.jpg">
-    </a>
-    <h3>Co Founder</h3>
-  </div>
+    <div class="card">
+      <a href="founder.html">
+        <img src="images/founder.jpg">
+      </a>
+      <h3>Founder / CEO</h3>
+    </div>
 
-  <div class="card">
-    <a href="manager.html">
-      <img src="images/manager.jpg">
-    </a>
-    <h3>Manager</h3>
+    <div class="card">
+      <a href="cofounder.html">
+        <img src="images/cofounder.jpg">
+      </a>
+      <h3>Co Founder</h3>
+    </div>
+
+    <div class="card">
+      <a href="manager.html">
+        <img src="images/manager.jpg">
+      </a>
+      <h3>Manager</h3>
+    </div>
+
   </div>
 </div>
 
@@ -131,18 +202,25 @@ nav a {
 <div class="section" id="store">
   <h1>Our Jerseys</h1>
 
-  <div class="card">
-    <img src="images/jersey1.jpg">
-    <h3>Official Jersey</h3>
-  </div>
+  <div class="cards">
 
-  <div class="card">
-    <a href="jersey2.html">
-      <img src="images/jersey2.jpg">
-    </a>
-    <h3>Coming Soon</h3>
+    <div class="card">
+      <img src="images/jersey1.jpg">
+      <h3>Official Jersey</h3>
+    </div>
+
+    <div class="card">
+      <a href="jersey2.html">
+        <img src="images/jersey2.jpg">
+      </a>
+      <h3>Coming Soon</h3>
+    </div>
+
   </div>
 </div>
 
 </body>
 </html>
+Sent
+Compose
+Write to
