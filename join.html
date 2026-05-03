@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Join ORIGINAL</title>
+<style>
+body {background:#0a0f1f;color:white;}
+.chat {padding:20px;}
+.msg {margin:10px;padding:10px;border-radius:10px;}
+.user {background:#00c6ff;}
+.ai {background:#333;}
+</style>
+</head>
+
+<body>
+
+<h2>Chat with ORIGINAL AI</h2>
+
+<div class="chat" id="chat">
+  <div class="msg ai">Welcome! Ask anything.</div>
+</div>
+
+<input id="input" placeholder="Type message">
+<button onclick="send()">Send</button>
+
+<script>
+function send(){
+  let input = document.getElementById("input");
+  let chat = document.getElementById("chat");
+
+  let userMsg = document.createElement("div");
+  userMsg.className="msg user";
+  userMsg.innerText=input.value;
+  chat.appendChild(userMsg);
+
+  let aiMsg = document.createElement("div");
+  aiMsg.className="msg ai";
+  aiMsg.innerText="We will contact you soon.";
+  chat.appendChild(aiMsg);
+
+  input.value="";
+}
+</script>
+
+</body>
+</html>
