@@ -13,19 +13,20 @@ body {
   color: white;
 }
 
-/* HEADER */
+/* TITLE */
 h1 {
   text-align: center;
   margin: 20px 0;
 }
 
-/* CHAT BOX */
+/* CHAT CONTAINER */
 .chat-container {
   max-width: 600px;
   margin: auto;
   padding: 10px;
 }
 
+/* CHAT BOX */
 .chat-box {
   background: #111;
   border-radius: 10px;
@@ -34,7 +35,7 @@ h1 {
   overflow-y: auto;
 }
 
-/* MESSAGES */
+/* USER MESSAGE */
 .user {
   background: #00c6ff;
   padding: 10px;
@@ -43,6 +44,7 @@ h1 {
   text-align: right;
 }
 
+/* AI MESSAGE */
 .bot {
   background: #333;
   padding: 10px;
@@ -73,7 +75,7 @@ button {
   color: white;
 }
 
-/* MOBILE FIX */
+/* MOBILE */
 @media (max-width: 768px) {
   .chat-box {
     height: 300px;
@@ -102,38 +104,46 @@ button {
 <script>
 function sendMessage() {
   let input = document.getElementById("userInput");
-  let message = input.value.toLowerCase();
+  let message = input.value;
+  let lower = message.toLowerCase();
   let chat = document.getElementById("chatBox");
 
   if (message === "") return;
 
   // show user message
-  chat.innerHTML += `<div class="user">${input.value}</div>`;
+  chat.innerHTML += `<div class="user">${message}</div>`;
 
   let reply = "We will contact you soon.";
 
-  // SMART AI REPLIES
-  if (message.includes("join")) {
+  // AI replies
+  if (lower.includes("join")) {
     reply = "To join ORIGINAL ESPORTS, send your UID, rank, and experience.";
   } 
-  else if (message.includes("hi") || message.includes("hello")) {
+  else if (lower.includes("hi") || lower.includes("hello")) {
     reply = "Hello 👋 Welcome to ORIGINAL ESPORTS!";
   }
-  else if (message.includes("team")) {
+  else if (lower.includes("team")) {
     reply = "We are a competitive esports team focused on Free Fire & PUBG.";
   }
-  else if (message.includes("jersey")) {
-    reply = "Our official jerseys are available in the store section.";
+  else if (lower.includes("jersey")) {
+    reply = "Our official jerseys are available in the store.";
   }
-  else if (message.includes("owner") || message.includes("founder")) {
+  else if (lower.includes("owner") || lower.includes("founder")) {
     reply = "You can check our founder details in the team section.";
   }
 
-  // show bot reply
+  // show AI reply
   setTimeout(() => {
     chat.innerHTML += `<div class="bot">${reply}</div>`;
     chat.scrollTop = chat.scrollHeight;
   }, 500);
+
+  // 🔥 YOUR REAL REPLY SYSTEM (WHATSAPP)
+  setTimeout(() => {
+    let phone = "818058477969"; 
+    let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  }, 1000);
 
   input.value = "";
 }
