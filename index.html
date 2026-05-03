@@ -3,178 +3,146 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ORIGINAL Esports</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>ORIGINAL ESPORTS</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
-body{background:#050505;color:#fff;}
-
-nav{
-position:fixed;top:0;width:100%;
-display:flex;justify-content:space-between;
-padding:15px 40px;background:#000;
-z-index:1000;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: linear-gradient(to bottom, #0a0f1f, #050505);
 }
 
-.logo{display:flex;align-items:center;gap:10px;}
-.logo img{width:50px;}
-
-.nav-links a{margin:0 15px;color:#fff;text-decoration:none;}
-
-.hero{
-height:100vh;
-display:flex;flex-direction:column;
-justify-content:center;align-items:center;
-text-align:center;
-background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
-url('https://drive.google.com/uc?export=view&id=1zMwNeiTQCCCKHIj181f2GHV2ChnisUnW') center/cover;
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: rgba(0,0,0,0.6);
+  position: fixed;
+  width: 100%;
 }
 
-.hero h1{font-size:60px;color:#00bfff;}
-.hero p{margin:20px 0;}
+nav img { width: 50px; }
 
-.btn{
-padding:12px 25px;
-border-radius:30px;
-margin:10px;
-display:inline-block;
-cursor:pointer;
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
 }
 
-.btn1{background:#00bfff;}
-.btn2{background:#ff3b3b;}
-
-section{padding:80px 20px;text-align:center;}
-
-.team{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('images/banner.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.card{
-background:#111;border-radius:15px;
-overflow:hidden;
+.hero h1 {
+  font-size: 40px;
 }
 
-.card img{width:100%;height:300px;object-fit:cover;}
-
-.store{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
+.btn {
+  padding: 12px 25px;
+  margin: 10px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
 }
 
-.store img{width:100%;}
+.join { background: #00c6ff; }
+.shop { background: #ff3b3b; }
 
-footer{padding:40px;background:#000;}
-
-.chatbot{
-position:fixed;
-bottom:20px;right:20px;
-background:#00bfff;
-width:60px;height:60px;
-border-radius:50%;
-display:flex;justify-content:center;align-items:center;
-cursor:pointer;
+/* TEAM */
+.section {
+  padding: 60px 20px;
+  text-align: center;
 }
+
+.card {
+  background: #111;
+  border-radius: 15px;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 300px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
-<div class="logo">
-<img src="https://drive.google.com/uc?export=view&id=1EAsyY4W3kW1rJBCBiZpppF0aqpHVU4di">
-<h2>ORIGINAL</h2>
-</div>
-
-<div class="nav-links">
-<a href="#home">Home</a>
-<a href="#team">Team</a>
-<a href="#store">Store</a>
-</div>
+  <div>
+    <img src="images/logo.png">
+    ORIGINAL
+  </div>
+  <div>
+    <a href="#">Home</a>
+    <a href="#team">Team</a>
+    <a href="#store">Store</a>
+  </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero" id="home">
-<h1>ORIGINAL ESPORTS</h1>
-<p>Rise Slowly. Dominate Completely.</p>
-
-<div>
-<a class="btn btn1">JOIN ORIGINAL</a>
-<a class="btn btn2">SHOP NOW</a>
+<div class="hero">
+  <h1>Rise Slowly. Dominate Completely.</h1>
+  <div>
+    <a href="join.html" class="btn join">JOIN ORIGINAL</a>
+    <a href="#store" class="btn shop">SHOP NOW</a>
+  </div>
 </div>
-</section>
 
 <!-- TEAM -->
-<section id="team">
-<h2>Our Team</h2>
+<div class="section" id="team">
+  <h1>Our Team</h1>
 
-<div class="team">
+  <div class="card">
+    <a href="founder.html">
+      <img src="images/founder.jpg">
+    </a>
+    <h3>Founder / CEO</h3>
+  </div>
 
-<div class="card">
-<img src="https://drive.google.com/uc?export=view&id=17qx4gvdhhSo7IY5F2wcj_KzXQvJ1ldcF">
-<h3>Founder & CEO</h3>
-<p>Leader of ORIGINAL Esports, building a powerful future in competitive gaming.</p>
+  <div class="card">
+    <a href="cofounder.html">
+      <img src="images/cofounder.jpg">
+    </a>
+    <h3>Co Founder</h3>
+  </div>
+
+  <div class="card">
+    <a href="manager.html">
+      <img src="images/manager.jpg">
+    </a>
+    <h3>Manager</h3>
+  </div>
 </div>
-
-<div class="card">
-<img src="https://drive.google.com/uc?export=view&id=1OmKrcPjyV805QpR63Vspf3vpD5cG-aFM">
-<h3>Co-Founder</h3>
-<p>Supporting growth and strengthening the organization.</p>
-</div>
-
-<div class="card">
-<img src="https://drive.google.com/uc?export=view&id=1T1JN-CHBsAVh7pztFVR1zDqAbAxVT1jE">
-<h3>Manager</h3>
-<p>Managing team operations and ensuring success.</p>
-</div>
-
-</div>
-</section>
 
 <!-- STORE -->
-<section id="store">
-<h2>Official Store</h2>
+<div class="section" id="store">
+  <h1>Our Jerseys</h1>
 
-<div class="store">
+  <div class="card">
+    <img src="images/jersey1.jpg">
+    <h3>Official Jersey</h3>
+  </div>
 
-<div>
-<img src="https://drive.google.com/uc?export=view&id=14miYlAgKJBNghTqdCub-DEX3kanATLP5">
-<h3>Official Jersey</h3>
-<p>Premium esports jersey with comfort and performance.</p>
-<p>NPR 2,499</p>
+  <div class="card">
+    <a href="jersey2.html">
+      <img src="images/jersey2.jpg">
+    </a>
+    <h3>Coming Soon</h3>
+  </div>
 </div>
-
-<div>
-<img src="https://drive.google.com/uc?export=view&id=1Bp3g2Mn6DZ8WpScplwxn9E25R4sTdIlA">
-<h3>Coming Soon</h3>
-<p>New jersey launching soon 🔥</p>
-</div>
-
-</div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-<h3>ORIGINAL ESPORTS</h3>
-<p>© 2025 All Rights Reserved</p>
-</footer>
-
-<!-- AI BUTTON -->
-<div class="chatbot" onclick="chat()">
-<i class="fas fa-robot"></i>
-</div>
-
-<script>
-function chat(){
-alert("AI Support Coming Soon 🤖");
-}
-</script>
 
 </body>
 </html>
