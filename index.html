@@ -55,7 +55,7 @@ nav a:hover {
 
 .hero h1 {
   font-size: 28px;
-  text-shadow: 0 0 20px #00c6ff;
+  text-shadow: 0 0 10px #00c6ff, 0 0 20px #000;
   animation: fadeUp 1s ease;
 }
 
@@ -152,6 +152,27 @@ nav a:hover {
   .hero h1 {
     font-size: 20px;
   }
+}
+  /* 📱 FIX TEXT POSITION ON MOBILE */
+@media (max-width: 768px) {
+
+  .hero {
+    position: relative;
+  }
+
+  .hero h1 {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    font-size: 16px;
+    width: 90%;
+    text-align: center;
+    
+    line-height: 1.4;
+  }
+
 }
 </style>
 
