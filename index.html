@@ -1,413 +1,180 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ORIGINAL Esports | Nepal Esports Organization</title>
-    <meta name="description" content="Official website of ORIGINAL Esports Nepal. Rising Slowly, Dominating Completely.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ORIGINAL Esports</title>
 
-    <!-- Website Icon -->
-    <link rel="icon" type="image/png" href="images/logo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
+body{background:#050505;color:#fff;}
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            scroll-behavior:smooth;
-            font-family:'Segoe UI',sans-serif;
-        }
+nav{
+position:fixed;top:0;width:100%;
+display:flex;justify-content:space-between;
+padding:15px 40px;background:#000;
+z-index:1000;
+}
 
-        body{
-            background:#050505;
-            color:#fff;
-            overflow-x:hidden;
-        }
+.logo{display:flex;align-items:center;gap:10px;}
+.logo img{width:50px;}
 
-        a{
-            text-decoration:none;
-            color:inherit;
-        }
+.nav-links a{margin:0 15px;color:#fff;text-decoration:none;}
 
-        img{
-            max-width:100%;
-            display:block;
-        }
+.hero{
+height:100vh;
+display:flex;flex-direction:column;
+justify-content:center;align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+url('https://drive.google.com/uc?export=view&id=1zMwNeiTQCCCKHIj181f2GHV2ChnisUnW') center/cover;
+}
 
-        nav{
-            position:fixed;
-            top:0;
-            width:100%;
-            background:rgba(0,0,0,0.9);
-            backdrop-filter:blur(10px);
-            z-index:1000;
-            padding:15px 50px;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-        }
+.hero h1{font-size:60px;color:#00bfff;}
+.hero p{margin:20px 0;}
 
-        .logo{
-            display:flex;
-            align-items:center;
-            gap:15px;
-            font-size:1.7rem;
-            font-weight:700;
-            color:#00bfff;
-        }
+.btn{
+padding:12px 25px;
+border-radius:30px;
+margin:10px;
+display:inline-block;
+cursor:pointer;
+}
 
-        .logo img{
-            width:60px;
-            height:60px;
-            object-fit:contain;
-        }
+.btn1{background:#00bfff;}
+.btn2{background:#ff3b3b;}
 
-        .nav-links{
-            display:flex;
-            gap:30px;
-        }
+section{padding:80px 20px;text-align:center;}
 
-        .nav-links a{
-            font-weight:600;
-            transition:.3s;
-        }
+.team{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
 
-        .nav-links a:hover{
-            color:#ff3b3b;
-        }
+.card{
+background:#111;border-radius:15px;
+overflow:hidden;
+}
 
-        .hero{
-            min-height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:100px 20px;
-            background:
-                linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
-                url('images/banner.jpg') center/cover no-repeat;
-        }
+.card img{width:100%;height:300px;object-fit:cover;}
 
-        .hero-content h1{
-            font-size:5rem;
-            color:#00bfff;
-            text-shadow:0 0 25px #00bfff;
-            margin-bottom:20px;
-        }
+.store{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
 
-        .hero-content p{
-            font-size:1.5rem;
-            color:#ddd;
-            margin-bottom:35px;
-        }
+.store img{width:100%;}
 
-        .btn{
-            display:inline-block;
-            padding:15px 35px;
-            margin:10px;
-            border-radius:50px;
-            font-weight:bold;
-            transition:.3s;
-        }
+footer{padding:40px;background:#000;}
 
-        .btn-primary{
-            background:#00bfff;
-            color:#fff;
-        }
-
-        .btn-secondary{
-            background:#ff3b3b;
-            color:#fff;
-        }
-
-        .btn:hover{
-            transform:translateY(-5px);
-        }
-
-        section{
-            padding:100px 50px;
-        }
-
-        .section-title{
-            text-align:center;
-            font-size:3rem;
-            color:#00bfff;
-            margin-bottom:60px;
-        }
-
-        .about{
-            max-width:1000px;
-            margin:auto;
-            text-align:center;
-        }
-
-        .about p{
-            font-size:1.2rem;
-            line-height:1.9;
-            color:#ccc;
-        }
-
-        .team-grid{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-            gap:30px;
-        }
-
-        .card{
-            background:#111;
-            border-radius:20px;
-            overflow:hidden;
-            transition:.4s;
-        }
-
-        .card:hover{
-            transform:translateY(-10px);
-            box-shadow:0 15px 40px rgba(0,191,255,0.3);
-        }
-
-        .card img{
-            width:100%;
-            height:350px;
-            object-fit:cover;
-        }
-
-        .card-content{
-            padding:25px;
-            text-align:center;
-        }
-
-        .card-content h3{
-            color:#00bfff;
-            margin-bottom:10px;
-        }
-
-        .store-item{
-            max-width:1000px;
-            margin:auto;
-            background:#111;
-            border-radius:25px;
-            overflow:hidden;
-            display:grid;
-            grid-template-columns:1fr 1fr;
-            align-items:center;
-        }
-
-        .store-item img{
-            width:100%;
-            height:100%;
-            object-fit:cover;
-        }
-
-        .store-info{
-            padding:40px;
-        }
-
-        .store-info h3{
-            font-size:2rem;
-            margin-bottom:20px;
-        }
-
-        .price{
-            font-size:2.2rem;
-            color:#ff3b3b;
-            margin:25px 0;
-        }
-
-        .social-links{
-            text-align:center;
-        }
-
-        .social-links a{
-            display:inline-block;
-            font-size:3rem;
-            margin:15px;
-            transition:.3s;
-        }
-
-        .social-links a:hover{
-            color:#00bfff;
-            transform:scale(1.2);
-        }
-
-        footer{
-            background:#000;
-            text-align:center;
-            padding:40px 20px;
-            border-top:1px solid #222;
-        }
-
-        .chatbot{
-            position:fixed;
-            right:30px;
-            bottom:30px;
-            width:70px;
-            height:70px;
-            border-radius:50%;
-            background:#00bfff;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            font-size:2rem;
-            cursor:pointer;
-            box-shadow:0 0 25px rgba(0,191,255,0.5);
-            z-index:1000;
-        }
-
-        @media(max-width:768px){
-            .nav-links{
-                display:none;
-            }
-
-            .hero-content h1{
-                font-size:3rem;
-            }
-
-            .store-item{
-                grid-template-columns:1fr;
-            }
-        }
-    </style>
+.chatbot{
+position:fixed;
+bottom:20px;right:20px;
+background:#00bfff;
+width:60px;height:60px;
+border-radius:50%;
+display:flex;justify-content:center;align-items:center;
+cursor:pointer;
+}
+</style>
 </head>
+
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">
-            <img src="IMG_0975.png">
-            ORIGINAL
-        </div>
+<!-- NAV -->
+<nav>
+<div class="logo">
+<img src="https://drive.google.com/uc?export=view&id=1EAsyY4W3kW1rJBCBiZpppF0aqpHVU4di">
+<h2>ORIGINAL</h2>
+</div>
 
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#team">Team</a>
-            <a href="#store">Store</a>
-            <a href="#social">Social</a>
-        </div>
-    </nav>
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#team">Team</a>
+<a href="#store">Store</a>
+</div>
+</nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>ORIGINAL ESPORTS</h1>
-            <p>Rise Slowly. Dominate Completely.</p>
+<!-- HERO -->
+<section class="hero" id="home">
+<h1>ORIGINAL ESPORTS</h1>
+<p>Rise Slowly. Dominate Completely.</p>
 
-            <a href="#team" class="btn btn-primary">Meet The Team</a>
-            <a href="#store" class="btn btn-secondary">Shop Jersey</a>
-        </div>
-    </section>
+<div>
+<a class="btn btn1">JOIN ORIGINAL</a>
+<a class="btn btn2">SHOP NOW</a>
+</div>
+</section>
 
-    <!-- About -->
-    <section id="about">
-        <h2 class="section-title">About Us</h2>
+<!-- TEAM -->
+<section id="team">
+<h2>Our Team</h2>
 
-        <div class="about">
-            <p>
-                Founded in October 2022, ORIGINAL Esports is one of Nepal's fastest-growing
-                esports organizations. Built on passion, teamwork, and dedication,
-                we continue to rise stronger every day.
+<div class="team">
 
-                Our mission is simple: dominate the competitive scene,
-                inspire the next generation, and represent Nepal on the global stage.
+<div class="card">
+<img src="https://drive.google.com/uc?export=view&id=17qx4gvdhhSo7IY5F2wcj_KzXQvJ1ldcF">
+<h3>Founder & CEO</h3>
+<p>Leader of ORIGINAL Esports, building a powerful future in competitive gaming.</p>
+</div>
 
-                We are ORIGINAL.
-            </p>
-        </div>
-    </section>
+<div class="card">
+<img src="https://drive.google.com/uc?export=view&id=1OmKrcPjyV805QpR63Vspf3vpD5cG-aFM">
+<h3>Co-Founder</h3>
+<p>Supporting growth and strengthening the organization.</p>
+</div>
 
-    <!-- Team -->
-    <section id="team">
-        <h2 class="section-title">Our Team</h2>
+<div class="card">
+<img src="https://drive.google.com/uc?export=view&id=1T1JN-CHBsAVh7pztFVR1zDqAbAxVT1jE">
+<h3>Manager</h3>
+<p>Managing team operations and ensuring success.</p>
+</div>
 
-        <div class="team-grid">
+</div>
+</section>
 
-            <div class="card">
-                <img src="images/owner.jpg" alt="OG CHETTRI">
-                <div class="card-content">
-                    <h3>OG CHETTRI</h3>
-                    <p>Founder & CEO</p>
-                </div>
-            </div>
+<!-- STORE -->
+<section id="store">
+<h2>Official Store</h2>
 
-            <div class="card">
-                <img src="images/manager.jpg" alt="Team Manager">
-                <div class="card-content">
-                    <h3>Team Manager</h3>
-                    <p>Head of Operations</p>
-                </div>
-            </div>
+<div class="store">
 
-            <div class="card">
-                <img src="images/player1.jpg" alt="ORIGINAL Player">
-                <div class="card-content">
-                    <h3>Competitive Player</h3>
-                    <p>Professional Esports Athlete</p>
-                </div>
-            </div>
+<div>
+<img src="https://drive.google.com/uc?export=view&id=14miYlAgKJBNghTqdCub-DEX3kanATLP5">
+<h3>Official Jersey</h3>
+<p>Premium esports jersey with comfort and performance.</p>
+<p>NPR 2,499</p>
+</div>
 
-        </div>
-    </section>
+<div>
+<img src="https://drive.google.com/uc?export=view&id=1Bp3g2Mn6DZ8WpScplwxn9E25R4sTdIlA">
+<h3>Coming Soon</h3>
+<p>New jersey launching soon 🔥</p>
+</div>
 
-    <!-- Store -->
-    <section id="store">
-        <h2 class="section-title">Official Jersey</h2>
+</div>
+</section>
 
-        <div class="store-item">
-            <img src="images/jersey.png" alt="ORIGINAL Jersey">
+<!-- FOOTER -->
+<footer>
+<h3>ORIGINAL ESPORTS</h3>
+<p>© 2025 All Rights Reserved</p>
+</footer>
 
-            <div class="store-info">
-                <h3>ORIGINAL Official Team Jersey</h3>
+<!-- AI BUTTON -->
+<div class="chatbot" onclick="chat()">
+<i class="fas fa-robot"></i>
+</div>
 
-                <p>
-                    Premium esports jersey featuring authentic ORIGINAL branding,
-                    breathable fabric, professional comfort, and championship style.
-                </p>
-
-                <div class="price">NPR 2,499</div>
-
-                <a href="https://www.facebook.com/originalesp0ffc"
-                   target="_blank"
-                   class="btn btn-primary">
-                    Order Now
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social -->
-    <section id="social">
-        <h2 class="section-title">Join Our Community</h2>
-
-        <div class="social-links">
-            <a href="https://www.tiktok.com/@teamoriginal.np" target="_blank"><i class="fab fa-tiktok"></i></a>
-            <a href="https://www.facebook.com/originalesp0ffc" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://discord.gg/zBUTCSd2x" target="_blank"><i class="fab fa-discord"></i></a>
-            <a href="https://youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <h3>ORIGINAL ESPORTS</h3>
-        <p>© 2025 ORIGINAL Esports. All Rights Reserved.</p>
-        <p>Founded October 2022 | Nepal</p>
-    </footer>
-
-    <!-- AI Support -->
-    <div class="chatbot" onclick="openChat()">
-        <i class="fas fa-robot"></i>
-    </div>
-
-    <script>
-        function openChat(){
-            alert("AI Customer Support Coming Soon!");
-        }
-    </script>
+<script>
+function chat(){
+alert("AI Support Coming Soon 🤖");
+}
+</script>
 
 </body>
 </html>
-```
