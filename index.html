@@ -141,7 +141,46 @@ nav{
     background-size:cover;
 }
 }
+  /* ===== ANIMATIONS ===== */
+
+.fade{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.8s ease;
+}
+
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.card{
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 0 20px rgba(0,200,255,0.3);
+}
+
+.card img{
+  transition:0.4s;
+}
+
+.card:hover img{
+  transform:scale(1.05);
+}
+
+.btn{
+  transition:0.3s;
+}
+
+.btn:hover{
+  box-shadow:0 0 15px rgba(0,150,255,0.7);
+  transform:scale(1.05);
+}
 </style>
+  
 </head>
 
 <body>
@@ -157,7 +196,7 @@ nav{
 <div class="container">
 
 <!-- ABOUT -->
-<section class="section">
+<section class="section fade">
 <h2>About ORIGINAL</h2>
 <p>
 ORIGINAL Esports is more than just a gaming team — it represents a dream built
@@ -172,7 +211,7 @@ experience is part of a bigger journey — to rise slowly and dominate completel
 </section>
 
 <!-- TEAM -->
-<section class="section">
+<section class="section fade">
 <h2>Our Teams</h2>
 
 <div class="filters">
@@ -214,9 +253,19 @@ experience is part of a bigger journey — to rise slowly and dominate completel
 </div>
 
 <!-- SCHEDULE -->
-<section class="section">
+<section class="section fade">
 <h2>Schedule</h2>
+<section class="section fade">
+<h2>Get in Touch</h2>
 
+<div style="background:#111;padding:20px;border-radius:10px;max-width:500px;margin:auto;">
+
+<p><b>Email:</b> originalesp.offc@gmail.com</p>
+<p><b>Phone:</b> +977 9829494300</p>
+<p><b>Location:</b> Chitwan, Bharatpur</p>
+
+</div>
+</section>
 <div class="schedule">
 <p>Today - No events scheduled</p>
 <p>Tomorrow - No events scheduled</p>
@@ -238,6 +287,18 @@ card.style.display="none";
 });
 }
 </script>
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
 
+document.querySelectorAll('.fade').forEach(el=>{
+  observer.observe(el);
+});
+</script>
 </body>
 </html>
