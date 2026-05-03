@@ -17,72 +17,51 @@ body{
 / NAV /
 nav{
   display:flex;
-  justify-content:space-between;
   align-items:center;
   padding:15px;
   background:#000;
 }
+
 .logo{display:flex;align-items:center;}
 .logo img{width:40px;margin-right:10px;}
 
-/ HERO /
-.hero{
-  width:100%;
-  height:60vh;
-  background:url('images/banner.jpg') center/cover no-repeat;
-  display:flex;
-  justify-content:center;
-  align-items:flex-end;
-  text-align:center;
-}
-
-.hero-content{
-  margin-bottom:25px;
-}
-
-.hero-btn{
-  display:inline-block;
-  padding:10px 18px;
-  margin:5px;
-  border-radius:25px;
-  text-decoration:none;
-  color:white;
-  font-size:12px;
-}
-
-.join{background:linear-gradient(45deg,#00c6ff,#0072ff);}
-.shop{background:linear-gradient(45deg,red,orange);}
-
-/ CONTAINER /
+/ CONTAINER (FIX PC VIEW) /
 .container{
-  max-width:1200px;
+  max-width:1100px;
   margin:auto;
   padding:20px;
 }
 
 / SECTION /
 .section{
+  margin:50px 0;
   text-align:center;
-  padding:40px 10px;
 }
 
 .section p{
-  max-width:700px;
+  max-width:750px;
   margin:auto;
   color:#ccc;
-  line-height:1.6;
+  line-height:1.7;
 }
 
 / FILTER /
+.filters{
+  margin:20px 0;
+}
+
 .filters button{
   margin:5px;
-  padding:8px 12px;
+  padding:8px 14px;
   border-radius:20px;
   border:none;
   background:#222;
   color:white;
 }
-.filters .active{background:#7b2cff;}
+
+.filters .active{
+  background:#7b2cff;
+}
 
 / CARDS /
 .cards{
@@ -92,67 +71,44 @@ nav{
 }
 
 .card{
-  width:90%;
-  max-width:280px;
+  width:280px;
   margin:10px;
   background:#111;
-  border-radius:10px;
+  border-radius:12px;
   overflow:hidden;
-  text-align:center;
 }
 
 .card img{width:100%;}
 .card h3{padding:10px;}
 
-/ SCHEDULE /
-.schedule-box{
-  background:#111;
-  margin:10px;
-  padding:15px;
-  border-radius:10px;
-  text-align:left;
+/ BUTTON SECTION (DOWN SIDE) /
+.actions{
+  text-align:center;
+  margin:40px 0;
 }
 
-/ CONTACT /
-.contact{
+.btn{
+  display:inline-block;
+  padding:12px 25px;
+  margin:10px;
+  border-radius:25px;
+  text-decoration:none;
+  color:white;
+}
+
+.join{background:linear-gradient(45deg,#00c6ff,#0072ff);}
+.shop{background:linear-gradient(45deg,red,orange);}
+
+/ SCHEDULE /
+.schedule{
   background:#111;
   padding:20px;
   border-radius:10px;
-  margin:10px;
 }
 
-/ PC */
-@media (min-width:768px){
-  .hero{height:80vh;}
-  .hero-btn{font-size:14px;padding:12px 25px;}
-  .card{width:250px;}
-}
-  /* MOBILE FIX FINAL */
-@media (max-width:768px){
-
-  body{
-    overflow-x:hidden;
-  }
-
-  .hero{
-    height:45vh;
-    background-size:cover;
-    background-position:center;
-  }
-
-  .hero-content{
-    margin-bottom:10px;
-  }
-
-  .cards{
-    flex-direction:column;
-    align-items:center;
-  }
-
-  .card{
-    width:95%;
-  }
-
+/ MOBILE */
+@media(max-width:768px){
+  .card{width:95%;}
 }
 </style>
 </head>
@@ -166,27 +122,20 @@ nav{
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <a href="join.html" class="hero-btn join">JOIN ORIGINAL</a>
-    <a href="jersey2.html" class="hero-btn shop">SHOP NOW</a>
-  </div>
-</section>
-
 <div class="container">
 
 <!-- ABOUT -->
 <section class="section">
 <h2>About ORIGINAL</h2>
 <p>
-ORIGINAL Esports is more than just a gaming team — it is a vision built on passion,
-discipline, and ambition. Founded with the goal of representing Nepal in the global
-esports stage, we focus on high-level performance in Free Fire and PUBG.
-<br><br>
-From small beginnings to growing recognition, our journey reflects dedication,
-teamwork, and continuous improvement. We believe in rising step by step,
-learning from every challenge, and ultimately dominating completely.
+ORIGINAL Esports is more than just a gaming team — it represents a dream built
+through passion, discipline, and ambition. Founded with the goal of representing
+Nepal on the global esports stage, the team focuses on competitive excellence in
+Free Fire and PUBG.
+
+From humble beginnings, ORIGINAL has grown step by step through dedication,
+teamwork, and continuous improvement. Every match, every challenge, and every
+experience is part of a bigger journey — to rise slowly and dominate completely.
 </p>
 </section>
 
@@ -198,7 +147,6 @@ learning from every challenge, and ultimately dominating completely.
 <button class="active" onclick="filter('all')">All</button>
 <button onclick="filter('founder')">Owner / Founder</button>
 <button onclick="filter('manager')">Manager</button>
-<button onclick="filter('player')">Players</button>
 </div>
 
 <div class="cards">
@@ -224,40 +172,23 @@ learning from every challenge, and ultimately dominating completely.
 </a>
 </div>
 
-<div class="card player">
-<a href="jersey2.html">
-<img src="images/jersey1.jpg">
-<h3>Official Jersey (Available)</h3>
-</a>
-</div>
-
-<div class="card player">
-<a href="upcoming.html">
-<img src="images/jersey2.jpg">
-<h3>Upcoming Jersey</h3>
-</a>
-</div>
-
 </div>
 </section>
+
+<!-- BUTTONS MOVED DOWN -->
+<div class="actions">
+<a href="join.html" class="btn join">JOIN ORIGINAL</a>
+<a href="jersey2.html" class="btn shop">SHOP NOW</a>
+</div>
 
 <!-- SCHEDULE -->
 <section class="section">
 <h2>Schedule</h2>
 
-<div class="schedule-box">Today - No events scheduled</div>
-<div class="schedule-box">Tomorrow - No events scheduled</div>
-<div class="schedule-box">Monday - No events scheduled</div>
-</section>
-
-<!-- CONTACT -->
-<section class="section">
-<h2>Get in Touch</h2>
-
-<div class="contact">
-<p><b>Email:</b> originalesp.offc@gmail.com</p>
-<p><b>Phone:</b> +977 9829494300</p>
-<p><b>Location:</b> Chitwan, Bharatpur</p>
+<div class="schedule">
+<p>Today - No events scheduled</p>
+<p>Tomorrow - No events scheduled</p>
+<p>Monday - No events scheduled</p>
 </div>
 </section>
 
