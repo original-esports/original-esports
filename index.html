@@ -6,7 +6,13 @@
 <title>ORIGINAL Esports</title>
 
 <style>
-{margin:0;padding:0;box-sizing:border-box;}
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body{
   font-family:Arial;
@@ -14,7 +20,7 @@ body{
   color:white;
 }
 
-/ NAV /
+/* NAV */
 nav{
   display:flex;
   align-items:center;
@@ -22,17 +28,32 @@ nav{
   background:#000;
 }
 
-.logo{display:flex;align-items:center;}
-.logo img{width:40px;margin-right:10px;}
+.logo{
+  display:flex;
+  align-items:center;
+}
 
-/ CONTAINER (FIX PC VIEW) /
+.logo img{
+  width:40px;
+  margin-right:10px;
+}
+
+/* CONTAINER */
 .container{
-  max-width:1100px;
+  max-width:1200px;
   margin:auto;
   padding:20px;
 }
 
-/ SECTION /
+/* HERO */
+.hero{
+  width:100%;
+  height:70vh;
+  background:url('images/banner.jpg') center center no-repeat;
+  background-size:cover;
+}
+
+/* SECTION */
 .section{
   margin:50px 0;
   text-align:center;
@@ -45,11 +66,7 @@ nav{
   line-height:1.7;
 }
 
-/ FILTER /
-.filters{
-  margin:20px 0;
-}
-
+/* FILTER */
 .filters button{
   margin:5px;
   padding:8px 14px;
@@ -63,7 +80,7 @@ nav{
   background:#7b2cff;
 }
 
-/ CARDS /
+/* CARDS */
 .cards{
   display:flex;
   flex-wrap:wrap;
@@ -76,12 +93,22 @@ nav{
   background:#111;
   border-radius:12px;
   overflow:hidden;
+  transition:0.3s;
 }
 
-.card img{width:100%;}
-.card h3{padding:10px;}
+.card:hover{
+  transform:translateY(-10px);
+}
 
-/ BUTTON SECTION (DOWN SIDE) /
+.card img{
+  width:100%;
+}
+
+.card h3{
+  padding:10px;
+}
+
+/* BUTTONS */
 .actions{
   text-align:center;
   margin:40px 0;
@@ -96,172 +123,42 @@ nav{
   color:white;
 }
 
-.join{background:linear-gradient(45deg,#00c6ff,#0072ff);}
-.shop{background:linear-gradient(45deg,red,orange);}
-
-/ SCHEDULE /
-.schedule{
-  background:#111;
-  padding:20px;
-  border-radius:10px;
+.join{
+  background:linear-gradient(45deg,#00c6ff,#0072ff);
 }
 
-/ MOBILE */
-@media(max-width:768px){
-  .card{width:95%;}
-}
-  /* FIX PC CENTER ALIGN */
-.cards{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  align-items:flex-start;
+.shop{
+  background:linear-gradient(45deg,red,orange);
 }
 
-.section{
-  text-align:center;
-}
-
-.container{
-  max-width:1200px;
-  margin:0 auto;
-}
-  /* HERO BANNER */
-.hero{
-  width:100%;
-  height:70vh;
-  background:url('images/banner.jpg') center center no-repeat;
-  background-size:cover;
-}
-
-@media(max-width:768px){
-  .hero{
-    height:40vh;
-    background-position:center;
-    background-size:cover;
-}
-}
-  /* ===== ANIMATIONS ===== */
-
-.fade{
-  opacity:0;
-  transform:translateY(40px);
-  transition:all 0.8s ease;
-}
-
-.fade.show{
-  opacity:1;
-  transform:translateY(0);
-}
-
-.card{
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:translateY(-10px) scale(1.03);
-  box-shadow:0 0 20px rgba(0,200,255,0.3);
-}
-
-.card img{
-  transition:0.4s;
-}
-
-.card:hover img{
-  transform:scale(1.05);
-}
-
-.btn{
-  transition:0.3s;
-}
-
-.btn:hover{
-  box-shadow:0 0 15px rgba(0,150,255,0.7);
-  transform:scale(1.05);
-}
-  /* 🔥 STORE FIX (CLEAN DESIGN) */
+/* STORE */
 .store{
   text-align:center;
   padding:40px 20px;
 }
 
-/* IMAGE SIZE FIX */
 .store img{
   width:80%;
   max-width:300px;
   border-radius:12px;
-  margin-bottom:15px;
 }
 
-/* TITLE */
-.store h2{
-  font-size:22px;
-  margin-top:10px;
-}
-
-/* DESCRIPTION */
 .store p{
-  font-size:16px;
-  line-height:1.6;
   color:#ccc;
-  max-width:400px;
-  margin:10px auto;
 }
 
-/* BUY BUTTON FIX */
 .buy-btn{
   display:inline-block;
   margin-top:15px;
-  padding:12px 30px;
+  padding:14px 30px;
   background:linear-gradient(45deg,#ff3c00,#ff9900);
-  color:white;
-  font-size:16px;
-  font-weight:bold;
   border-radius:30px;
-  text-decoration:none;
-  box-shadow:0 0 15px rgba(255,100,0,0.5);
-  transition:0.3s;
-}
-
-.buy-btn:hover{
-  transform:scale(1.08);
-}
-
-/* PC IMPROVEMENT */
-@media(min-width:768px){
-  .store img{
-    max-width:350px;
-  }
-
-  .store h2{
-    font-size:26px;
-  }
-
-  .store p{
-    font-size:18px;
-  }.buy-btn{
-  display:inline-block;
-  margin-top:15px;
-  padding:14px 35px;
-  background:linear-gradient(45deg,#ff3c00,#ff9900);
   color:white;
-  font-size:18px;
-  font-weight:bold;
-  border-radius:30px;
   text-decoration:none;
-  box-shadow:0 0 20px rgba(255,100,0,0.6);
-  transition:0.3s;
 }
 
-.buy-btn:hover{
-  transform:scale(1.1);
-}
-  .store img{
-  width:80%;
-  max-width:300px;
-  display:block;
-  margin:auto;
-}.menu-btn{
+/* MENU BUTTON */
+.menu-btn{
   font-size:24px;
   position:fixed;
   top:20px;
@@ -271,14 +168,14 @@ nav{
   z-index:1001;
 }
 
+/* SIDE MENU */
 .side-menu{
   position:fixed;
   top:0;
   left:-100%;
   width:80%;
   height:100%;
-  background:black;
-  color:white;
+  background:rgba(0,0,0,0.95);
   padding:20px;
   transition:0.4s;
   z-index:1000;
@@ -288,85 +185,69 @@ nav{
   left:0;
 }
 
-.menu-logo{
-  width:40px;
-}
-
-.menu-desc{
-  margin:15px 0;
-  color:#ccc;
-}
-
 .side-menu a{
   display:block;
-  margin:10px 0;
   color:white;
   text-decoration:none;
+  margin:10px 0;
 }
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero{
+    height:40vh;
+  }
+}
+
 </style>
-  
 </head>
 
 <body>
+
 <!-- MENU BUTTON -->
 <div class="menu-btn" onclick="openMenu()">☰</div>
 
 <!-- SIDE MENU -->
 <div id="sideMenu" class="side-menu">
+  <h2>ORIGINAL ESPORTS</h2>
 
-  <div class="menu-header">
-    <img src="images/logo.png" class="menu-logo">
-    <h2>ORIGINAL ESPORTS</h2>
-  </div>
-
-  <p class="menu-desc">
-    ORIGINAL Esports represents passion, discipline, and ambition — explore our journey, achievements, and the team behind the success.
-  </p>
+  <p>Explore our journey and team.</p>
 
   <h3>Company</h3>
   <a href="#">Home</a>
-  <a href="#">About Us</a>
-  <a href="#">Gallery</a>
-  <a href="#">Latest News</a>
-  <a href="#">Our Teams</a>
+  <a href="#">About</a>
+  <a href="#">Teams</a>
 
-  <h3>Original Store</h3>
-  <a href="shop.html">Shop Now</a>
-  <a href="#">Contact Support</a>
-
+  <h3>Store</h3>
+  <a href="buy.html">Shop</a>
 </div>
+
 <nav>
   <div class="logo">
     <img src="images/logo.png">
     <b>ORIGINAL</b>
   </div>
 </nav>
-<section class="hero">
-</section>
+
+<section class="hero"></section>
+
 <div class="container">
 
 <!-- ABOUT -->
-<section class="section fade">
+<section class="section">
 <h2>About ORIGINAL</h2>
 <p>
-ORIGINAL Esports is more than just a gaming team — it represents a dream built
-through passion, discipline, and ambition. Founded with the goal of representing
-Nepal on the global esports stage, the team focuses on competitive excellence in
-Free Fire and PUBG.
-
-From humble beginnings, ORIGINAL has grown step by step through dedication,
-teamwork, and continuous improvement. Every match, every challenge, and every
-experience is part of a bigger journey — to rise slowly and dominate completely.
+ORIGINAL Esports represents passion and ambition. We grow step by step to dominate completely.
 </p>
 </section>
 
 <!-- TEAM -->
-<section class="section fade">
+<section class="section">
 <h2>Our Teams</h2>
 
 <div class="filters">
-<button class="active" onclick="filter('all')">All</button>
-<button onclick="filter('founder')">Owner / Founder</button>
+<button onclick="filter('all')">All</button>
+<button onclick="filter('founder')">Founder</button>
 <button onclick="filter('manager')">Manager</button>
 </div>
 
@@ -379,13 +260,6 @@ experience is part of a bigger journey — to rise slowly and dominate completel
 </a>
 </div>
 
-<div class="card founder">
-<a href="cofounder.html">
-<img src="images/cofounder.jpg">
-<h3>Co Founder</h3>
-</a>
-</div>
-
 <div class="card manager">
 <a href="manager.html">
 <img src="images/manager.jpg">
@@ -393,58 +267,28 @@ experience is part of a bigger journey — to rise slowly and dominate completel
 </a>
 </div>
 
-  <div class="card manager">
-  <a href="manager2.html">
-    <img src="images/manager2.jpg">
-    <h3>Manager</h3>
-  </a>
+<div class="card manager">
+<a href="manager2.html">
+<img src="images/manager2.jpg">
+<h3>Manager</h3>
+</a>
 </div>
 
 </div>
 </section>
 
-<!-- BUTTONS MOVED DOWN -->
-  <div class="store">
-
-  <h2>Official Store</h2>
-
-  <img src="images/jersey1.jpg">
-
-  <h2>ORIGINAL Jersey (Official)</h2>
-
-  <p>
-  Designed with performance and national pride, this jersey represents the spirit of Nepal in esports.
-  Lightweight, breathable, and made for champions.
-  </p>
-
-  <a href="buy.html" class="buy-btn">Buy Now</a>
-
+<!-- STORE -->
+<div class="store">
+<h2>Official Store</h2>
+<img src="images/jersey1.jpg">
+<p>Official ORIGINAL jersey.</p>
+<a href="buy.html" class="buy-btn">Buy Now</a>
 </div>
+
 <div class="actions">
-<a href="join.html" class="btn join">JOIN ORIGINAL</a>
-<a href="buy.html" class="btn shop">SHOP NOW</a>
+<a href="join.html" class="btn join">JOIN</a>
+<a href="buy.html" class="btn shop">SHOP</a>
 </div>
-
-<!-- SCHEDULE -->
-<section class="section fade">
-<h2>Schedule</h2>
-
-<div class="schedule-box">
-  <p>Today - No events scheduled</p>
-  <p>Tomorrow - No events scheduled</p>
-  <p>Monday - No events scheduled</p>
-</div>
-
-<h2>Get in Touch</h2>
-
-<div class="contact-box">
-  <p>Email: originalesp.offc@gmail.com</p>
-  <p>Phone: +977 9829494300</p>
-  <p>Location: Chitwan, Bharatpur</p>
-</div>
-</section>
-
-</section>
 
 </div>
 
@@ -459,19 +303,11 @@ card.style.display="none";
 }
 });
 }
-</script>
-<script>
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
-  });
-});
 
-document.querySelectorAll('.fade').forEach(el=>{
-  observer.observe(el);
-});
+function openMenu(){
+document.getElementById("sideMenu").classList.toggle("active");
+}
 </script>
+
 </body>
 </html>
