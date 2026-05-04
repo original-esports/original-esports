@@ -6,13 +6,7 @@
 <title>ORIGINAL Esports</title>
 
 <style>
-
-/* RESET */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+{margin:0;padding:0;box-sizing:border-box;}
 
 body{
   font-family:Arial;
@@ -20,7 +14,7 @@ body{
   color:white;
 }
 
-/* NAV */
+/ NAV /
 nav{
   display:flex;
   align-items:center;
@@ -28,32 +22,17 @@ nav{
   background:#000;
 }
 
-.logo{
-  display:flex;
-  align-items:center;
-}
+.logo{display:flex;align-items:center;}
+.logo img{width:40px;margin-right:10px;}
 
-.logo img{
-  width:40px;
-  margin-right:10px;
-}
-
-/* CONTAINER */
+/ CONTAINER /
 .container{
-  max-width:1200px;
+  max-width:1100px;
   margin:auto;
   padding:20px;
 }
 
-/* HERO */
-.hero{
-  width:100%;
-  height:70vh;
-  background:url('images/banner.jpg') center center no-repeat;
-  background-size:cover;
-}
-
-/* SECTION */
+/ SECTION /
 .section{
   margin:50px 0;
   text-align:center;
@@ -66,7 +45,11 @@ nav{
   line-height:1.7;
 }
 
-/* FILTER */
+/ FILTER /
+.filters{
+  margin:20px 0;
+}
+
 .filters button{
   margin:5px;
   padding:8px 14px;
@@ -80,7 +63,7 @@ nav{
   background:#7b2cff;
 }
 
-/* CARDS */
+/ CARDS /
 .cards{
   display:flex;
   flex-wrap:wrap;
@@ -96,19 +79,14 @@ nav{
   transition:0.3s;
 }
 
+.card img{width:100%;}
+.card h3{padding:10px;}
+
 .card:hover{
-  transform:translateY(-10px);
+  transform:translateY(-10px) scale(1.03);
 }
 
-.card img{
-  width:100%;
-}
-
-.card h3{
-  padding:10px;
-}
-
-/* BUTTONS */
+/ BUTTONS /
 .actions{
   text-align:center;
   margin:40px 0;
@@ -123,15 +101,17 @@ nav{
   color:white;
 }
 
-.join{
-  background:linear-gradient(45deg,#00c6ff,#0072ff);
+.join{background:linear-gradient(45deg,#00c6ff,#0072ff);}
+.shop{background:linear-gradient(45deg,red,orange);}
+
+/ HERO /
+.hero{
+  width:100%;
+  height:70vh;
+  background:url('images/banner.jpg') center/cover no-repeat;
 }
 
-.shop{
-  background:linear-gradient(45deg,red,orange);
-}
-
-/* STORE */
+/ STORE /
 .store{
   text-align:center;
   padding:40px 20px;
@@ -140,35 +120,32 @@ nav{
 .store img{
   width:80%;
   max-width:300px;
-  border-radius:12px;
-}
-
-.store p{
-  color:#ccc;
+  margin:auto;
+  display:block;
 }
 
 .buy-btn{
   display:inline-block;
   margin-top:15px;
-  padding:14px 30px;
+  padding:14px 35px;
   background:linear-gradient(45deg,#ff3c00,#ff9900);
-  border-radius:30px;
   color:white;
+  font-size:18px;
+  border-radius:30px;
   text-decoration:none;
 }
 
-/* MENU BUTTON */
+/ ===== MENU ===== */
 .menu-btn{
-  font-size:24px;
+  font-size:26px;
   position:fixed;
   top:20px;
-  right:20px;
+  left:20px;
   color:white;
   cursor:pointer;
   z-index:1001;
 }
 
-/* SIDE MENU */
 .side-menu{
   position:fixed;
   top:0;
@@ -176,6 +153,8 @@ nav{
   width:80%;
   height:100%;
   background:rgba(0,0,0,0.95);
+  backdrop-filter:blur(10px);
+  color:white;
   padding:20px;
   transition:0.4s;
   z-index:1000;
@@ -185,20 +164,21 @@ nav{
   left:0;
 }
 
+.menu-logo{
+  width:40px;
+}
+
+.menu-desc{
+  margin:15px 0;
+  color:#ccc;
+}
+
 .side-menu a{
   display:block;
+  margin:10px 0;
   color:white;
   text-decoration:none;
-  margin:10px 0;
 }
-
-/* MOBILE */
-@media(max-width:768px){
-  .hero{
-    height:40vh;
-  }
-}
-
 </style>
 </head>
 
@@ -209,17 +189,20 @@ nav{
 
 <!-- SIDE MENU -->
 <div id="sideMenu" class="side-menu">
+  <img src="images/logo.png" class="menu-logo">
   <h2>ORIGINAL ESPORTS</h2>
 
-  <p>Explore our journey and team.</p>
+  <p class="menu-desc">
+    ORIGINAL Esports represents passion, discipline, and ambition.
+  </p>
 
   <h3>Company</h3>
   <a href="#">Home</a>
-  <a href="#">About</a>
-  <a href="#">Teams</a>
+  <a href="#">About Us</a>
+  <a href="#">Our Teams</a>
 
   <h3>Store</h3>
-  <a href="buy.html">Shop</a>
+  <a href="buy.html">Shop Now</a>
 </div>
 
 <nav>
@@ -233,41 +216,38 @@ nav{
 
 <div class="container">
 
-<!-- ABOUT -->
 <section class="section">
 <h2>About ORIGINAL</h2>
-<p>
-ORIGINAL Esports represents passion and ambition. We grow step by step to dominate completely.
-</p>
+<p>ORIGINAL Esports is more than just a gaming team...</p>
 </section>
 
-<!-- TEAM -->
 <section class="section">
 <h2>Our Teams</h2>
 
-<div class="filters">
-<button onclick="filter('all')">All</button>
-<button onclick="filter('founder')">Founder</button>
-<button onclick="filter('manager')">Manager</button>
-</div>
-
 <div class="cards">
 
-<div class="card founder">
+<div class="card">
 <a href="founder.html">
 <img src="images/founder.jpg">
 <h3>Founder</h3>
 </a>
 </div>
 
-<div class="card manager">
+<div class="card">
+<a href="cofounder.html">
+<img src="images/cofounder.jpg">
+<h3>Co Founder</h3>
+</a>
+</div>
+
+<div class="card">
 <a href="manager.html">
 <img src="images/manager.jpg">
 <h3>Manager</h3>
 </a>
 </div>
 
-<div class="card manager">
+<div class="card">
 <a href="manager2.html">
 <img src="images/manager2.jpg">
 <h3>Manager</h3>
@@ -277,35 +257,23 @@ ORIGINAL Esports represents passion and ambition. We grow step by step to domina
 </div>
 </section>
 
-<!-- STORE -->
 <div class="store">
 <h2>Official Store</h2>
 <img src="images/jersey1.jpg">
-<p>Official ORIGINAL jersey.</p>
+<h2>ORIGINAL Jersey</h2>
 <a href="buy.html" class="buy-btn">Buy Now</a>
 </div>
 
 <div class="actions">
-<a href="join.html" class="btn join">JOIN</a>
-<a href="buy.html" class="btn shop">SHOP</a>
+<a href="join.html" class="btn join">JOIN ORIGINAL</a>
+<a href="buy.html" class="btn shop">SHOP NOW</a>
 </div>
 
 </div>
 
 <script>
-function filter(type){
-let cards=document.querySelectorAll(".card");
-cards.forEach(card=>{
-if(type==="all"||card.classList.contains(type)){
-card.style.display="block";
-}else{
-card.style.display="none";
-}
-});
-}
-
 function openMenu(){
-document.getElementById("sideMenu").classList.toggle("active");
+  document.getElementById("sideMenu").classList.toggle("active");
 }
 </script>
 
