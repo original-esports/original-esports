@@ -302,6 +302,10 @@ nav{
   margin:10px 0;
   color:white;
   text-decoration:none;
+}/* BACKGROUND OVERLAY EFFECT */
+.side-menu{
+  background: rgba(0,0,0,0.95);
+  backdrop-filter: blur(10px);
 }
 </style>
   
@@ -472,6 +476,11 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll('.fade').forEach(el=>{
   observer.observe(el);
 });
+</script>
+  <script>
+function openMenu(){
+  document.getElementById("sideMenu").classList.toggle("active");
+}
 </script>
 </body>
 </html>
